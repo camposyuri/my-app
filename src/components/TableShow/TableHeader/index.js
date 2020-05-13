@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const TableHeader = props => {
+const TableHeader = (props) => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const TableHeader = props => {
     <>
       <thead>
         <tr>
-          {properties.map(prop => {
+          {properties.map((prop) => {
             return <th ket={prop}>{prop}</th>;
           })}
         </tr>
