@@ -39,37 +39,37 @@ const Users = () => {
 
   return (
     <>
-      <Container fluid className="my-3">
+      <Container className="my-3">
         <Row className="align-items-center">
           <Col md="4">
             <h1>Users</h1>
           </Col>
         </Row>
+        <TableShow>
+          <TableHeader
+            id="Id"
+            name="Name"
+            userName="Username"
+            email="E-mail"
+            actions="Actions"
+          />
+          {data.map((user) => {
+            return (
+              <TableBody
+                key={user.id}
+                id={user.id}
+                name={user.name}
+                userName={user.username}
+                email={user.email}
+              >
+                <Link className="btn btn-success" to={"/view-posts/" + user.id}>
+                  View
+                </Link>
+              </TableBody>
+            );
+          })}
+        </TableShow>
       </Container>
-      <TableShow>
-        <TableHeader
-          id="Id"
-          name="Name"
-          userName="User Name"
-          email="E-mail"
-          actions="Actions"
-        />
-        {data.map((user) => {
-          return (
-            <TableBody
-              key={user.id}
-              id={user.id}
-              name={user.name}
-              userName={user.username}
-              email={user.email}
-            >
-              <Link className="btn btn-success" to={"/view-posts/" + user.id}>
-                View
-              </Link>
-            </TableBody>
-          );
-        })}
-      </TableShow>
     </>
   );
 };

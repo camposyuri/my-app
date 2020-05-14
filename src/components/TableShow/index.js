@@ -4,7 +4,7 @@ import { Table } from "reactstrap";
 const TableShow = ({ children }) => {
   return (
     <>
-      <Table responsive hover size="sm">
+      <Table responsive hover dark size="sm">
         {children}
       </Table>
     </>

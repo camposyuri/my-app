@@ -7,7 +7,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
 } from "reactstrap";
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-      <Navbar color="light" light expand="md">
+      <Navbar color="dark" dark expand="md">
         <NavbarBrand tag={Link} to="/">
           MyApp
         </NavbarBrand>
@@ -29,6 +29,11 @@ const Header = () => {
             <NavItem>
               <NavLink tag={Link} to="/users">
                 Users
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={Link} to="/all-post">
+                All Posts
               </NavLink>
             </NavItem>
           </Nav>
